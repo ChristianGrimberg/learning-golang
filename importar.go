@@ -5,6 +5,8 @@ import (
 )
 
 func main() {
+	const initial string = "Hello"
 	var name string = "world"
-	fmt.Printf("Hello %s!", name)
+
+	fmt.Printf("%s %s!", initial, name)
 }

@@ -1,6 +1,9 @@
 package main
 
-import "fmt"
+import (
+	"fmt"
+	"math"
+)
 
 func init() {
 	fmt.Printf("==Start with init==\n")
@@ -21,6 +24,8 @@ func main() {
 	fmt.Printf("=> Result: %d\n", num1*num2)
 	fmt.Printf("==Coffee==\nName: %s\nPrice: %.2f\nSugar: %t\nMilk: %d\n", cup1.name, cup1.price, cup1.sugar, cup1.milk)
 	fmt.Printf("==Coffee==\nName: %s\nPrice: %.2f\nSugar: %t\nMilk: %d\n", cup2.name, cup2.price, cup2.sugar, cup2.milk)
+	sum := math.Abs(float64(cup1.price) + float64(cup2.price)) // Explicit type convertion
+	fmt.Printf("==Coffee==\nTotal price: %f\n", sum)
 	fmt.Printf("=> Muliply %d x %d = %d\n", num1, num2, multiply(num1, num2))
 	value1, value2 := clousures(num3)
 	fmt.Printf("=> %d %s\n", value1, value2)
